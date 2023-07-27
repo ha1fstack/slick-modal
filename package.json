@@ -1,0 +1,68 @@
+{
+  "name": "slick-modal",
+  "private": true,
+  "description": "Simple modal manager for React that does the trick.",
+  "keywords": [
+    "modal",
+    "popup",
+    "react"
+  ],
+  "license": "MIT",
+  "version": "0.0.0",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plrs9816/slick-modal.git"
+  },
+  "homepage": "https://github.com/plrs9816/slick-modal",
+  "author": "plrs9816",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm build:swc && pnpm types",
+    "build:swc": "swc src -d dist --copy-files",
+    "dev": "pnpm build:swc -w",
+    "types": "tsc --emitDeclarationOnly",
+    "lint": "TIMING=1 eslint \"src/**/*.{ts,tsx,js,jsx}\" --fix",
+    "clean": "rm -rf dist"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.6.1",
+  "dependencies": {
+    "@nanostores/react": "^0.7.1",
+    "nanostores": "^0.9.3"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.66",
+    "@types/node": "18.15.7",
+    "@types/react": "18.0.29",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
+}
