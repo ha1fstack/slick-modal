@@ -5,7 +5,7 @@ Simple modal manager for React that does the trick.
 ## Introduction
 
 Slick Modal is a small modal state manager for React focusing on simplicity and ease of use.
-It is inspired by [nice-modal-react](https://github.com/eBay/nice-modal-react) package.
+It is inspired by [nice-modal-react](https://github.com/eBay/nice-modal-react).
 
 You can show and hide modals in a declarative way, with typesafe async and client component("use client") support.
 
@@ -198,3 +198,8 @@ function ModalControl() {
 ## Demo
 
 Clone the repo and run the example Next.JS app.
+
+## To Do
+
+- [ ] Add testings
+- [ ] Add JSDoc
