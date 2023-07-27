@@ -146,6 +146,8 @@ function ModalControl() {
 Managed modals
 
 ```tsx
+"use client";
+
 function ManagedModal({ text }: { text: string }) {
   const { key, stackIndex, hide, resolve } = testManagedModal.useModal();
 
