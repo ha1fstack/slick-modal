@@ -1,6 +1,5 @@
 {
   "name": "slick-modal",
-  "private": true,
   "description": "Simple modal manager for React that does the trick.",
   "keywords": [
     "modal",
@@ -8,7 +7,7 @@
     "react"
   ],
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "0.0.1-canary.0",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
