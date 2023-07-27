@@ -13,7 +13,7 @@ You can show and hide modals in a declarative way, with typesafe async and clien
 
 ```bash
 npm install slick-modal
-yarn install slick-modal
+yarn add slick-modal
 pnpm install slick-modal
 ```
 
