@@ -5,12 +5,14 @@ import React from "react";
 import { SlickModalContext } from "../context/modal";
 import { SlickModalStore, createModalStore } from "../store";
 
-function SlickModalProvider({
+export type SlickModalProviderProps = React.PropsWithChildren<{
+  store?: SlickModalStore;
+}>;
+
+export function SlickModalProvider({
   children,
   store,
-}: React.PropsWithChildren<{
-  store?: SlickModalStore;
-}>) {
+}: SlickModalProviderProps) {
   const [_store] = React.useState(createModalStore());
 
   return (
@@ -19,5 +21,3 @@ function SlickModalProvider({
     </SlickModalContext.Provider>
   );
 }
-
-export default SlickModalProvider;

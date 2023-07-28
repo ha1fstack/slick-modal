@@ -1,9 +1,15 @@
 "use client";
 
-import createModal, { CreateModalParams } from "./actions/createModal";
-import destroyModal, { DestroyModalParams } from "./actions/destroyModal";
-import rejectModal, { RejectModalParams } from "./actions/rejectModal";
-import resolveModal, { ResolveModalParams } from "./actions/resolveModal";
+import {
+  CreateModalParams,
+  createModal,
+  DestroyModalParams,
+  destroyModal,
+  ResolveModalParams,
+  resolveModal,
+  RejectModalParams,
+  rejectModal,
+} from "./actions";
 import { SlickModalStore } from "./store";
 
 export function createModalControl(store: SlickModalStore) {

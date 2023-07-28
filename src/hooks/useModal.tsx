@@ -5,7 +5,7 @@ import { SlickModalContext, SlickModalKeyContext } from "../context";
 import React from "react";
 import { SlickModalHandler } from "../types";
 
-function useModal<ResolveReturn extends unknown = unknown>(
+export function useModal<ResolveReturn extends unknown = unknown>(
   fallbackOptions?: SlickModalHandler
 ): SlickModalHandler<ResolveReturn> {
   const key = React.useContext(SlickModalKeyContext);
@@ -58,5 +58,3 @@ function useModal<ResolveReturn extends unknown = unknown>(
     ...modalHandlerProps,
   };
 }
-
-export default useModal;

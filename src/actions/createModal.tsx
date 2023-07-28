@@ -5,7 +5,9 @@ import { SlickModalStore, defaultStore } from "../store";
 import { SlickModalCreateOptions } from "../types";
 import { generateModalKey } from "../utils";
 
-function createModal<ResolveReturn extends unknown>(
+export type CreateModalParams = Parameters<typeof createModal>;
+
+export function createModal<ResolveReturn extends unknown>(
   element: React.ReactNode,
   store?: SlickModalStore,
   options?: SlickModalCreateOptions
@@ -57,7 +59,3 @@ function createModal<ResolveReturn extends unknown>(
   }
   return store.callbacks[key].promise as Promise<ResolveReturn>;
 }
-
-export type CreateModalParams = Parameters<typeof createModal>;
-
-export default createModal;

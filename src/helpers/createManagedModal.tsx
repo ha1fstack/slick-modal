@@ -6,7 +6,7 @@ import { SlickModalStore } from "../store";
 import { SlickModalCreateOptions } from "../types";
 import { generateModalKey } from "../utils";
 
-function createManagedModal<ResolveReturn extends unknown, P extends {}>(
+export function createManagedModal<ResolveReturn extends unknown, P extends {}>(
   element: React.FC<P>,
   store?: SlickModalStore,
   options?: SlickModalCreateOptions
@@ -18,7 +18,7 @@ function createManagedModal<ResolveReturn extends unknown, P extends {}>(
   useModal: typeof useModal<ResolveReturn>;
 };
 
-function createManagedModal<ResolveReturn extends unknown>(
+export function createManagedModal<ResolveReturn extends unknown>(
   element: React.ReactNode,
   store?: SlickModalStore,
   options?: SlickModalCreateOptions
@@ -29,7 +29,7 @@ function createManagedModal<ResolveReturn extends unknown>(
   useModal: typeof useModal<ResolveReturn>;
 };
 
-function createManagedModal(
+export function createManagedModal(
   element: React.ReactNode | React.FC,
   store?: SlickModalStore,
   options?: SlickModalCreateOptions
@@ -62,5 +62,3 @@ function createManagedModal(
     useModal,
   };
 }
-
-export default createManagedModal;
