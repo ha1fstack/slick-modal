@@ -149,7 +149,7 @@ Managed modals
 "use client";
 
 function ManagedModal({ text }: { text: string }) {
-  const { key, stackIndex, hide, resolve } = testManagedModal.useModal();
+  const { key, stackIndex, hide, resolve } = managedModal.useModal();
 
   return (
     <div>
@@ -171,7 +171,7 @@ function ManagedModal({ text }: { text: string }) {
   );
 }
 
-export const testManagedModal = createManagedModal<
+export const managedModal = createManagedModal<
   string,
   // typescript generic inference is all or nothing, so we have to manually specify the props type
   React.ComponentProps<typeof ManagedModal>
@@ -182,7 +182,7 @@ function ModalControl() {
   // you can optionally override this behavior.
   const openManagedModal = () => {
     // typed resolve params
-    testManagedModal.open({ text: `hello ${Math.random()}` }).then((data) => {
+    managedModal.open({ text: `hello ${Math.random()}` }).then((data) => {
       alert(data);
     });
   };
