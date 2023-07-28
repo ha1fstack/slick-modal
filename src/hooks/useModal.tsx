@@ -28,6 +28,16 @@ function useModal<ResolveReturn extends unknown = unknown>(
         store.callbacks[key]?.reject(arg);
         delete store.callbacks[key];
       },
+      resolveHide: (arg: ResolveReturn) => {
+        store.callbacks[key]?.resolve(arg);
+        store.modals.setKey(key, undefined);
+        delete store.callbacks[key];
+      },
+      rejectHide: (arg: unknown) => {
+        store.callbacks[key]?.reject(arg);
+        store.modals.setKey(key, undefined);
+        delete store.callbacks[key];
+      },
     };
   }, [key, store.callbacks, store.modals]);
 
