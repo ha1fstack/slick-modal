@@ -7,7 +7,7 @@ export interface SlickModalState {
 
 export interface SlickModalCreateOptions {
   /**
-   * Unique key for the modal. If not provided, a random key will be generated.
+   * Unique key for each modal instance. If not provided, a random key will be generated.
    */
   key?: React.Key;
   /**
@@ -35,6 +35,9 @@ export interface SlickModalCallbacks {
 export type ManagedModal = ReturnType<typeof createManagedModal>;
 
 export interface SlickModalHandler<ResolveReturn extends unknown = unknown> {
+  /**
+   * Unique key for each modal instance.
+   */
   key: React.Key;
   /**
    * Hide (remove) the modal.
@@ -58,5 +61,8 @@ export interface SlickModalHandler<ResolveReturn extends unknown = unknown> {
    * Helper to run both reject and hide.
    */
   rejectHide: (arg: unknown) => void;
+  /**
+   * The position index of the modal in the current store's modal stack.
+   */
   stackIndex: number;
 }
