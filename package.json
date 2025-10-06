@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/plrs9816/slick-modal.git"
+    "url": "https://github.com/ha1fstack/slick-modal.git"
   },
-  "homepage": "https://github.com/plrs9816/slick-modal",
-  "author": "plrs9816",
+  "homepage": "https://github.com/ha1fstack/slick-modal",
+  "author": "ha1fstack",
   "files": [
     "dist",
     "src"
